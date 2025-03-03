@@ -14,10 +14,10 @@ export default function Home() {
         <p className="relative text-4xl font-bold text-white text-center px-8 p-4">
           Title Text Test
         </p>
-      </div>
+      </div> 
 
     
-  <div className="grid gap-y-2">
+  <div className="grid gap-y-4">
 
 
       <div className="grid grid-cols-2 items-start gap-x-96 mt-64">
