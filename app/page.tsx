@@ -24,7 +24,7 @@ export default function Home() {
                 Title Text Testy
               </p>
               <Link href="/chat">
-                <Button size="large" className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg">
+                <Button size="large" className="bg-gray-600 hover:bg-gray-700 text-white rounded-lg">
                   Chat Bot
                 </Button>
               </Link>
