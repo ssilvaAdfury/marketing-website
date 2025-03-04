@@ -25,7 +25,7 @@ const MessageForm = () => {
           rows={3}
           value={content}
           autoFocus
-          className="bg-gray-50 border-0 !p-3 text-gray-900 shadow-none ring-1 ring-gray-300/40 backdrop-blur focus:outline-none focus:ring-gray-300/80 dark:bg-gray-800/80 dark:text-white dark:placeholder-gray-400 dark:ring-0"
+          className="bg-gray-50 border-0 !p-3 !text-gray-900 shadow-none ring-1 ring-gray-300/40 backdrop-blur focus:outline-none focus:ring-gray-300/80 dark:bg-gray-800/80 dark:!text-white dark:placeholder-gray-400 dark:ring-0"
           onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
         />
         <div className="absolute right-8 bottom-10">

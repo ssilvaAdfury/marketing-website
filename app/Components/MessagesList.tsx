@@ -29,7 +29,7 @@ const MessagesList = () => {
               style={{ maxWidth: 'calc(100% - 45px)' }}
               className={`group relative rounded-lg px-3 py-2 ${
                 isUser
-                  ? 'from-primary-700 to-primary-600 mr-2 bg-gradient-to-br text-white'
+                  ? 'mr-2 bg-blue-100 text-gray-900 dark:bg-blue-600 dark:text-white'
                   : 'ml-2 bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
               }`}
             >
