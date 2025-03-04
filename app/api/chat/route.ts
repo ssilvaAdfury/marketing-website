@@ -6,10 +6,10 @@ export async function POST(request: Request) {
     const apiKey = process.env.OPENAI_API_KEY;
     const url = 'https://api.openai.com/v1/chat/completions';
 
-    // Check if API key exists
+    
     if (!apiKey) {
-      console.error('API key is missing');
-      return NextResponse.json({ error: 'OpenAI API key is not configured' }, { status: 500 });
+      console.error('is API key missing? Did you mess up?');
+      return NextResponse.json({ error: 'OpenAI API key is not set up' }, { status: 500 });
     }
 
     const body = JSON.stringify({
@@ -30,7 +30,6 @@ export async function POST(request: Request) {
     
     const data = await response.json();
     
-    // Log any error from OpenAI
     if (data.error) {
       console.error('OpenAI API Error:', data.error);
       return NextResponse.json(
