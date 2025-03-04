@@ -19,7 +19,7 @@ export default function Home() {
           <div className="relative w-full h-96 bg-[url('/images/landingpageTestImage4.png')] bg-fixed bg-cover bg-[position:50%_60%] flex items-center justify-center backdrop-blur-lg">
           <div className="absolute inset-0 bg-black/64"></div>
             <p className="relative text-4xl font-bold text-white text-center px-8 p-4">
-              Title Text Test
+              Title Text Testy
             </p>
           </div> 
 
