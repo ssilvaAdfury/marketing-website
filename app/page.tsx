@@ -25,7 +25,7 @@ export default function Home() {
               </p>
               <Link href="/chat">
                 <Button size="large" className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg">
-                  Try Our Chat Bot
+                  Chat Bot
                 </Button>
               </Link>
             </div>
