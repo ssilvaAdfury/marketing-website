@@ -2,11 +2,12 @@
 
 import paragraphComponent from "./Components/paragraph";
 import Image from "next/image";
-import { ToastProvider } from '@apideck/components'
+import { Button, ToastProvider } from '@apideck/components'
 import { AppProps } from 'next/app'
 import { MessagesProvider } from './utils/useMessages'
 import MessageForm from './Components/MessageForm'
 import MessagesList from './Components/MessagesList'
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -17,10 +18,17 @@ export default function Home() {
         <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
           
           <div className="relative w-full h-96 bg-[url('/images/landingpageTestImage4.png')] bg-fixed bg-cover bg-[position:50%_60%] flex items-center justify-center backdrop-blur-lg">
-          <div className="absolute inset-0 bg-black/64"></div>
-            <p className="relative text-4xl font-bold text-white text-center px-8 p-4">
-              Title Text Testy
-            </p>
+            <div className="absolute inset-0 bg-black/64"></div>
+            <div className="relative flex flex-col items-center gap-6">
+              <p className="text-4xl font-bold text-white text-center px-8 p-4">
+                Title Text Testy
+              </p>
+              <Link href="/chat">
+                <Button size="large" className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg">
+                  Try Our Chat Bot
+                </Button>
+              </Link>
+            </div>
           </div> 
 
         
