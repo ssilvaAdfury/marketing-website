@@ -17,7 +17,7 @@ export default function Home() {
       </div> 
 
     
-  <div className="grid gap-y-4">
+  <div className="grid gap-y-2">
 
 
       <div className="grid grid-cols-2 items-start gap-x-96 mt-64">
