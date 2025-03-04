@@ -1,12 +1,26 @@
 import { useMessages } from '../utils/useMessages'
+import { useEffect, useRef } from 'react'
 
 // Define the message type inline
 type Message = { role: string; content: string };
 
 const MessagesList = () => {
   const { messages, isLoadingAnswer } = useMessages()
+  // Create a ref for the messages container
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  // Scroll to bottom whenever messages change
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages])
+
+  // Function to handle scrolling to the bottom
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
-    <div className="mx-auto max-w-3xl pt-8">
+    <div className="mx-auto max-w-3xl pt-8 overflow-y-auto">
       {messages?.map((message: Message, i: number) => {
         const isUser = message.role === 'user'
         if (message.role === 'system') return null
@@ -59,6 +73,8 @@ const MessagesList = () => {
           </div>
         </div>
       )}
+      {/* This invisible div marks the end of messages for scrolling */}
+      <div ref={messagesEndRef} />
     </div>
   )
 }
